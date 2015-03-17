@@ -1,0 +1,45 @@
+user:jiawen16(Li,Jia Wen)
+This app is designed to allow multiple users to record different sections of a song and combine the recordings to make one song.
+Part 1
+
+Record Section
+->Pick a stanza and language
+->click the microphone icon to segue to the record page 
+->record the song by clicking the microphone
+->press stop icon to stop recording and press play icon to hear what you just recorded
+->Press "upload" to upload the the song to the server
+->The song is uploaded when the progress bar is full
+
+Make Section
+->Click play/pause icons to listen/pause recordings by the current user or by other users
+->Tap on tables cell to select multiple audio files for sythesis
+->The audio file is selected when a check mark is presented
+->Click "sythesis" at the bottom to combine all audio files selected into one song
+->The alert view appears when the concatenation is completed
+->Choose "Yes" to listen to your synthesized song
+->Click "save" to another view and put the song's name in the textfiled and click "save again"
+->After the progress bar is full, click "share with other users"
+->If you choose "cancel" at the alert view, you can click "listen" or "save" on the main view later
+
+Listen Section
+->You will see songs uploaded by you and by other users
+->Click "play" to listen to the song in AVPlayerView 
+
+User Profile Section
+->I did not have time to implement  login mechanism, but you can change the current user name here to simulate the multi-user social aspects of the app. 
+
+Part 2
+1. AVFoundation API for recording,playing,etc.
+2. Read/Write Files to Document Directory
+3. NSFileManager, AVsset ,AVAssetExportSession,etc for concaternating the audio files by extracting the audio tracks from individual files and write them into one file
+4. Parse for server and storage; handled everything in multi-threading fashion
+5. UIPickerView for picking language
+6. AlertViews to send messages
+7. Cell.AccesoryType to display "checkmarks" for multiple table cell selections
+8. AVPlayerView to play audio files
+9. NSUserDefaults for storing current user name
+10. UIProgress View to show completion of data uploading
+11. UIRefreshControl to show the process of pulling data
+12. Different kinds of segues
+
+
