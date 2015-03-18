@@ -31,7 +31,6 @@ class WriteDataToFile{
     func writeData(content:AnyObject,fileName:String,dirName:String)->String{
         var filePath = getFilePath(fileName, dirName: dirName)
         let url = NSURL(fileURLWithPath: filePath)
-        println(url)
         var error: NSError?
         if((content as NSData).writeToFile(filePath, options:NSDataWritingOptions.DataWritingAtomic, error:&error)){
             

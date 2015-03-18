@@ -29,9 +29,6 @@ class SongTableViewController: UITableViewController {
             
             if let content = possibleContent {
                 lyrics = content.componentsSeparatedByString("\n\n")
-                for line in lyrics!{
-                    println(line)
-                }
             }
         }
 
@@ -83,8 +80,6 @@ class SongTableViewController: UITableViewController {
                         recordViewController.lyrics = source.lyricsShown
                         recordViewController.recordLang = source.langText
                     
-                        println(source.lyricsShown)
-                        println(source.langText)
                         recordViewController.index=bu.tag
                     }
                 }

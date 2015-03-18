@@ -46,8 +46,6 @@ class AudioConcatenator {
 
         for name in cafNames {
             if let ass = assetForFileName(name) {
-                println("found asset: \(ass.description)")
-                println("avasset Stanza: \(namesStanza[ass])")
                 cafAssets.append(ass)
             }
         }
@@ -167,7 +165,6 @@ class AudioConcatenator {
     private func assetForFileName(name: String) -> AVAsset! {
         
         var filePath = self.directory.stringByAppendingString("/\(name)")
-        println(filePath)
         var fileURL = NSURL(fileURLWithPath: filePath)
         var avasset =  AVURLAsset.assetWithURL(fileURL) as AVAsset!
         var nameArr = name.componentsSeparatedByString("-")

@@ -85,7 +85,7 @@ class LyricsSectionTableViewCell: UITableViewCell,UIPickerViewDataSource,UIPicke
         langIndex = langPicker.selectedRowInComponent(0)
         updateLyrics()
         langText = pickerData[0][langIndex]
-        println("The lang is " + langText)
+        //println("The lang is " + langText)
 
     }
 }

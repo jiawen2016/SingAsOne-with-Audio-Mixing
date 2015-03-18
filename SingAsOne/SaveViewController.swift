@@ -103,11 +103,11 @@ class SaveViewController: UIViewController {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 // The find succeeded.
-                println("Successfully retrieved \(objects.count) songs.")
+                //println("Successfully retrieved \(objects.count) songs.")
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        println(object.objectId)
+                        //println(object.objectId)
                         object["shared"] = true
                         object.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
                             if(succeeded && error == nil){
